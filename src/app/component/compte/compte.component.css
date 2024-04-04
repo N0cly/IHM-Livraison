@@ -4,9 +4,6 @@
   margin-right: 0px;
   position: fixed;
   right: 0;
-
-
-
 }
 
 .container {
@@ -16,6 +13,7 @@
   animation: rotate_3922 1.2s linear infinite;
   background-color: #E93559;
   background-image: linear-gradient(#E93559, #84cdfa, #5ad1cd);
+  z-index: 1000;
 }
 
 .container span {
@@ -67,10 +65,47 @@
 
 .account__links {
   display: none;
+  /*affiche en bas du bouton*/
+  position: absolute;
+  top: 100%;
+  right: 0;
 }
 
 .account__links--open {
   display: flex;
   flex-direction: column;
+  /*rectangle sur tout le coté de droit de la page avec un dégradé de couleur linéaire*/
+  background: linear-gradient(80deg, rgb(179, 208, 253) 0%, rgb(0, 105, 231) 100%);
+  /*taille du rectangle*/
+  width: 250px;
+  /*toute la hauteur de la page*/
+  height: 100vh;
+  /*taille du rectangle*/
+  position: absolute;
+  margin-top: -177px;
+}
 
+.account__link{
+  /*descendre les rectangles en dessous du boutons*/
+  margin-top: 200px;
+  /*taille du rectangle*/
+  width: 100%;
+  /*taille du rectangle*/
+  height: 50px;
+  /*taille du rectangle*/
+  padding: 10px;
+  /*taille du rectangle*/
+  display: flex;
+  /*taille du rectangle*/
+  justify-content: center;
+  /*taille du rectangle*/
+  align-items: center;
+  /*taille du rectangle*/
+  color: #fff;
+  /*taille du rectangle*/
+  text-decoration: none;
+  /*taille du rectangle*/
+  font-size: 1.5rem;
+  /*taille du rectangle*/
+  border-bottom: solid 1px #fff;
 }
