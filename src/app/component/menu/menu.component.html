@@ -1,0 +1,10 @@
+<button class="menu__icon" (click)="buttonClick()">
+  <span></span>
+  <span></span>
+</button>
+
+<div class="menu__links" [ngClass]="{'menu__links--open': buttonCliked}">
+  <a class="menu__link" href="#">Home</a>
+  <a class="menu__link" href="#">About</a>
+  <a class="menu__link" href="#">Services</a>
+</div>
