@@ -1,8 +1,12 @@
 .all{
   display: flex;
   justify-content: flex-end;
-  margin-right: -10px;
-  margin-top: -250px;
+  margin-right: 0px;
+  position: fixed;
+  right: 0;
+
+
+
 }
 
 .container {
@@ -68,4 +72,5 @@
 .account__links--open {
   display: flex;
   flex-direction: column;
+
 }
