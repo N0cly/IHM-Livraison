@@ -51,6 +51,9 @@
   background-color: #fff;
   border: solid 5px #ffffff;
   border-radius: 50%;
+  background-image: url("/assets/profil.png");
+  background-size: 100%;
+  background-position: center;
 }
 
 @keyframes rotate_3922 {
