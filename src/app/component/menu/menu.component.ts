@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NgClass} from "@angular/common";
 
 @Component({
@@ -12,7 +12,10 @@ import {NgClass} from "@angular/common";
 })
 export class MenuComponent {
 
-  buttonCliked = false;
+  @Input() buttonCliked = false;
+  @Input() buttonClikedMenu = false;
+  @Input() buttonClikedPlats = false;
+
 
   constructor() { }
 
@@ -21,5 +24,15 @@ export class MenuComponent {
 
   buttonClick() {
     this.buttonCliked = !this.buttonCliked;
+  }
+
+  buttonClickMenu() {
+    this.buttonClikedMenu = !this.buttonClikedMenu;
+
+  }
+
+  buttonClickPlats() {
+    this.buttonClikedPlats = !this.buttonClikedPlats;
+
   }
 }

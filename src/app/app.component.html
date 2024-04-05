@@ -1,4 +1,7 @@
 
-<app-navbar></app-navbar>
-<app-menu></app-menu>
+<app-navbar ></app-navbar>
+<app-menu [buttonClikedMenu]="menu" [buttonClikedPlats]="plats"></app-menu>
+
+<!--<app-menu></app-menu>-->
 <app-compte></app-compte>
+<app-plats *ngIf="plats"></app-plats>

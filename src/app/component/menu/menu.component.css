@@ -17,6 +17,7 @@ button {
   backdrop-filter: saturate(180%) blur(20px);
   border: solid 1px rgb(143, 248, 255);
   position: relative;
+  transition: transform .3192s cubic-bezier(.04,.04,.12,.96);
 }
 
 .menu__icon span {
@@ -48,6 +49,7 @@ button {
   transform: translateY(3px);
 }
 
+
 .menu__icon:hover :nth-child(1),
 .menu__icon:hover :nth-child(2) {
   transition: transform .3192s cubic-bezier(.04,.04,.12,.96) .1008s;
@@ -67,12 +69,23 @@ button {
   transform: rotate(-45deg) translateY(-1px);
 }
 
+.menu__icon--open{
+  transform: translateX(100px);
+  transition: transform .3192s cubic-bezier(.04,.04,.12,.96);
+}
+
 .menu__links{
-  display: none;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100px);
+  transition: transform .3192s cubic-bezier(.04,.04,.12,.96);
 
 }
 
 .menu__links--open {
   display: flex;
   flex-direction: column;
+  transform: translateX(0px);
+  transition: transform .3192s cubic-bezier(.04,.04,.12,.96);
+
 }

@@ -9,14 +9,61 @@ export class MenusService {
 
   constructor(private http:HttpClient) { }
 
-  getMenus() {
-
-    return this.http.get(environment.api_menus);
+  getAllMenus(){
+    return this.http.get(environment.apiMenu);
   }
 
-  getPlatsMenu(id: number) {
-
-    return this.http.get(environment.api_menus + '/' + id + '/plats');
+  getMenuById(id: number){
+    return this.http.get(environment.apiMenu + id);
   }
+
+  createMenu(menu: any){
+    return this.http.post(environment.apiMenu, menu);
+  }
+
+  updateMenu(menu: any){
+    return this.http.put(environment.apiMenu + menu.id, menu);
+  }
+
+  deleteMenu(id: number){
+    return this.http.delete(environment.apiMenu + id);
+  }
+
+  getMenusByUser(id: number){
+    return this.http.get(environment.apiMenu + 'user/' + id);
+  }
+
+  getMenusByName(name: string){
+    const httpOptions = {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+
+    const data = {
+      name: name
+    }
+
+    return this.http.post(environment.apiMenu + 'name', data, httpOptions);
+  }
+
+  getMenusByPlat(id: number){
+    return this.http.get(environment.apiMenu + 'plat/' + id);
+  }
+
+  getMenusByPrice(price: number){
+    const httpOptions = {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+
+    const data = {
+      price: price
+    }
+
+    return this.http.post(environment.apiMenu + 'prixMax' , data, httpOptions);
+  }
+
 
 }
